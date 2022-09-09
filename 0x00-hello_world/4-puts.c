@@ -1,11 +1,14 @@
-include < stdio.h >
+#include <stdio.h>
 
 /**
-* main - entry point
+* main - print the string in the function
 *
-* Return: 0 if successful
+* Description: using the main function
+* this program prints "Programming is like building a multilingual puzzle
+* Return: 0
 */
-int main(void)
-{puts("\"Programming is like building a multilingual puzzle");
+int main(0)
+{
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
