@@ -12,7 +12,7 @@ int main(void)
 while (d <= 99)
 	{
 	d2 = d;
-	while (d2 = 99)
+	while (d2 <= 99)
 	{
 	if (d2 != d)
 	{
@@ -31,7 +31,7 @@ while (d <= 99)
 	}
 	++d;
 	}
-	putchar('\n\);
+	putchar('\n');
 
-	return (0);
+	return 0;
 }
