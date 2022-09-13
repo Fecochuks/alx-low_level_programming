@@ -1,4 +1,4 @@
-#include "maih.h"
+#include "main.h"
 /**
  * print_alphabet - function to print abc
  *
