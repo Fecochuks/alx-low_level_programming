@@ -33,7 +33,7 @@ int main(void)
 
 			b1 = b2, b2 = h2;
 
-			printf("%ld%010ld", f2, b2;
+			printf("%ld%010ld", f2, b2);
 		}
 		else
 		{
