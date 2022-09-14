@@ -12,6 +12,7 @@
 int main(void)
 {
 	int count;
+
 	long int i = 1, j = 2, k;
 
 	printf("%ld, ", i);
@@ -25,7 +26,7 @@ int main(void)
 			printf("%ld, ", j);
 
 		k = j;
-		j += i:
+		j += i;
 		i = k;
 	}
 
