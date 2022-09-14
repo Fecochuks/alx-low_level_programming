@@ -19,7 +19,7 @@ int main(void)
 
 	printf("%ld, %ld, ", b1, b2);
 
-	for (count = 2; count  < 98; count ++)
+	for (count = 2; count  < 98; count++)
 	{
 		if (b1 + b2 > LARGEST || f2 > 0 || f1 > 0)
 		{
