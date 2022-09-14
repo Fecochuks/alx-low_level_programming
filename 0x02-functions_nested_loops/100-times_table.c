@@ -4,6 +4,7 @@
  *
  * Description: if 'n' is greater than 15 or less than 0, print nothing
  * @n: int type number
+ *
  */
 void print_times_table(int n)
 {
@@ -11,6 +12,7 @@ void print_times_table(int n)
 
 	if (n > 15 || n < 0)
 		return;
+
 	for (x = 0; x <= n; x++)
 	{
 		for (y = 0; y <= n; y++)
@@ -20,6 +22,12 @@ void print_times_table(int n)
 			{
 				_putchar((z / 100) + '0');
 				_putchar(((z / 10) % 10) + '0');
+				_putchar((z % 10) + '0');
+			}
+			else if (z > 9)
+			{
+				_putchar(' ');
+				_putchar((z / 10) + '0');
 				_putchar((z % 10) + '0');
 			}
 			else if (y != 0)
@@ -39,4 +47,5 @@ void print_times_table(int n)
 		}
 		_putchar('\n');
 	}
+
 }
