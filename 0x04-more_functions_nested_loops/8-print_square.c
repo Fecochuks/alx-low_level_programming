@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
-*print_square - prints squares
-*@size: integer params
+* print_square -> prints squares
+* @size: integer params
 */
-
 void print_square(int size)
 {
 	int i, j;
 
-	if (size <= 2)
+	if (size <= 0)
 		_putchar('\n');
 	else
 	{
