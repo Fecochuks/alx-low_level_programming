@@ -17,7 +17,7 @@
  * February 29, 2427).
  *
  * Return: void.
- */
+*/
 
 void print_remaining_days(int month, int day, int year)
 {
