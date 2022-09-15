@@ -7,7 +7,7 @@
 *Return: returns nothing
 */
 
-int print_square(int size)
+void print_square(int size)
 
 {
 	int inc1, inc2;
@@ -18,14 +18,14 @@ int print_square(int size)
 		{
 			for (inc2 = 0; inc2 < (size - 1); inc2++)
 			{
-				_putchar(35);
+				putchar('#');
 			}
-			_putchar(35);
-			_putchar('\n');
+			putchar('#');
+			putchar('\n');
 		}
 	}
 	else
 	{
-		_putchar('\n');
+		putchar('\n');
 	}
 }
