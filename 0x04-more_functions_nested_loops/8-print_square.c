@@ -2,15 +2,14 @@
 
 /**
 *print_square - prints squares
-*@size: parameter
-*Return: returns nothing
+*@size: integer params
 */
 
 void print_square(int size)
 {
 	int i, j;
 
-	if (size <= 0)
+	if (size <= 2)
 		_putchar('\n');
 	else
 	{
