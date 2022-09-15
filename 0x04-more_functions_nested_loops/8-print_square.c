@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,23 +8,17 @@
 
 void print_square(int size)
 {
-	int inc1, inc2;
+	int i, j;
 
-	if (size > 0)
+	for (i = 0; i < size; i++)
 	{
-		for (inc1 = 0; inc1 < size; inc1++)
+		for (j = 0; j < size; j++)
 		{
-			for (inc2 = 0; inc2 < (size - 1); inc2++)
-			{
-				putchar('#');
-			}
-
-			putchar('#');
-			putchar('\n');
+			putchar(35);
 		}
-	}
-	else
-	{
+
+		if (i != size - 1)
 		putchar('\n');
 	}
+	putchar('\n');
 }
