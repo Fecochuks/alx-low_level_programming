@@ -2,7 +2,9 @@
 
 /**
 * print_square -> prints squares
-* @size: integer params
+* @size: integer parameter
+* @i: first integer
+* @j: second integer
 */
 void print_square(int size)
 {
