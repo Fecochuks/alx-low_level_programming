@@ -7,7 +7,7 @@
 *Return: returns nothings.
 */
 
-void print_square(int size);
+void print_size(int size);
 
 {
 	int inc1, inc2;
