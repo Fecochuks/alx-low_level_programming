@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
-*print_square - prints squares.
+*print_square - prints size of square.
 *@size: parameter.
 *char: use char '#' to print.
 *Return: returns nothings.
