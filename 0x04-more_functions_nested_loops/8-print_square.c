@@ -3,8 +3,7 @@
 
 /**
 *print_square - prints size of square.
-*@size: parameter.
-*char: use char '#' to print.
+*@size: parameter of square.
 *Return: returns nothings.
 */
 
@@ -15,18 +14,19 @@ void print_square(int size)
 
 	if (size > 0)
 	{
-		for (inc1 = 0; inc1 < size; inc1++)
+		for (inc1 = 1; inc1 <= size; inc1++)
 		{
-			for (inc2 = 0; inc2 < (size - 1); inc2++)
-			{
-				putchar('#');
-			}
-			putchar('#')
-			putchar('\n');
+			putchar(' ');
 		}
-	}
-	else
-	{
+		for ((inc2 = size - inc1); inc2 > 0; inc2++)
+		{
+			putchar('#')
+		}
+		if (inc1 == size)
+		{
+			continue;
+		}
 		putchar('\n');
 	}
+	putchar('\n');
 }
