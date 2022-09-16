@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
-*print_square - prints squares
-*@size: parameter
-*Return: returns nothings
+*print_square - prints squares.
+*@size: parameter.
+*char: use char '#' to print.
+*Return: returns nothings.
 */
 
-void print_square(int size)
+void print_square(int size);
 
 {
 	int inc1, inc2;
@@ -18,14 +18,13 @@ void print_square(int size)
 		{
 			for (inc2 = 0; inc2 < (size - 1); inc2++)
 			{
-				putchar('#');
+				_putchar('#');
 			}
-			putchar('#');
 			putchar('\n');
 		}
 	}
 	else
 	{
-		putchar('\n');
+		_putchar('#');
 	}
 }
