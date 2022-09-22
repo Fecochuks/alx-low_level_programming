@@ -5,7 +5,7 @@
  * @s1: first string
  * @s2: second string
  *
- * Retrun: values less than 0, if s1 < s2
+ * Return: values less than 0, if s1 < s2
  * value greater than 0, if s1 > s2
  * value equa to 0, if s1 == s2
  */
