@@ -1,4 +1,4 @@
-/*
+/**
  * File: 104-print_buffer.c
  * Auth: Chukwu ifeanyichukwu
  */
@@ -20,7 +20,7 @@ void print_buffer(char *b, int size)
 
 	for (byte = 0; byte < size; byte += 10)
 	{
-		printf("%08x: ", start);
+		printf("%08x: ", byte);
 
 		for (index = 0; index < 10; index++)
 		{
