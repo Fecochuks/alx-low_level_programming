@@ -1,10 +1,12 @@
+#include "main.h"
 /**
- *print_chessboard - prints a chessboard
+ * print_chessboard - prints a chessboard
  *
- *@a: pointer to matrix containing the chessboard
+ * @a: pointer to matrix containing the chessboard
  *
- *Return: nothing
+ * Return: nothing
  */
+
 void print_chessboard(char(*a)[8])
 {
 	int r, n;

@@ -1,5 +1,5 @@
 /**
- *set_string - sets the value of a pointer to a char
+ *_set_string - sets the value of a pointer to a char
  *
  *@s: content is to be copied
  *@to: string
