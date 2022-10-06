@@ -1,33 +1,42 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * _realloc - reallocates a memory block using malloc and free
- * @ptr: pointer
- * @old_size: old size
- * @new_size: new size
- * Return: pointer
+ * _realloc - a function that reallocates a memory block
+ * @ptr: void pointer to the allocated memory area
+ * @old_size: the old size of the allocated memory
+ * @new_size: the new size ofreallocated memory
+ * Return: void pointer
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 {
-	char *clone, *relloc;
-	unsigned int i;
-
-	if (ptr != NULL)
-	clone = ptr;
-	else
-	{ return (malloc(new_size)); }
-	if (new_size == old_size)
-	return (ptr);
-	if (new_size == 0 && ptr != NULL)
-	{ free(ptr);
-	return (0); }
-	realloc = malloc(new_size);
-	if (relloc == NULL)
-	return (0);
-	for (i = 0; i < (old_size || i < new_size); i++)
+/* allocating new dynamic memory without initialization */
+	if (new_size > old_size)
 	{
-		*(relloc + i) = clone[i];
+		free(ptr);
+			ptr = (int *) malloc(new_size);
+		if (ptr == NULL)
+			return (NULL);
+		else
+			return (ptr);
 	}
-	free(ptr);
-return (relloc);
+/*the call is equivalent to malloc(new_size)*/
+	if (ptr == NULL)
+	{
+		return (ptr = (int *) malloc(new_size));
+
+		if (ptr == NULL)
+			return (NULL);
+	}
+/* returns a Void Pointer */
+	if (new_size == old_size)
+		return (ptr);
+/* freeing Ptr) */
+	if (new_size == 0 && ptr)
+	{
+		free(ptr);
+			return (NULL);
+	}
+	return (ptr);
 }
