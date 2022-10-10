@@ -1,46 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
-
-int _strlen(char *str);
-char *strcopy(char *dest, char *src);
-dog_t *new_dog(char *name, float age, char *owner);
-
-/**
- * _strlen - Finds the length of a string.
- * @str: The string to be measured.
- *
- * Return: The length of the string.
- */
-
-int _strlen(char *str)
-{
-	int len = 0;
-
-	while (*str++)
-		len++;
-
-	return (len);
-}
-
-/**
- * _strcopy - Copies a string pointed to by src, including the
- *            terminating null byte, to a buffer pointed to by dest.
- * @dest: The buffer storing the string copy.
- * @src: The source string.
- *
- * Return: The pointer to dest.
- */
-char *_strcopy(char *dest, char *src)
-{
-	int index = 0;
-
-	for (index = 0; src[index]; index++)
-		dest[index] = src[index];
-
-	dest[index] = '\0';
-
-	return (dest);
-}
+#include <stdio.h>
 
 /**
  * new_dog - Creates a new dog.
@@ -50,35 +10,42 @@ char *_strcopy(char *dest, char *src)
  *
  * Return: The new struct dog.
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggo;
+	int i = 0, j = 0, k;
+	dog_t *doge;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
+	while (name[i] != '\0')
+		i++;
+	while (owner[j] != '\0')
+		j++;
 
-	doggo = malloc(sizeof(dog_t));
-	if (doggo == NUL)
-		return (NULL);
-
-	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (doogo->name == NULL)
+	doge = malloc(sizeof(dog_t));
+	if (doge == NUL)
 	{
-		free(doggo);
+		free(doge);
 		return (NULL);
 	}
-
-	doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (doggo->owner == NULL)
+	doge->name = malloc(i * sizeof(doge->name));
+	if (doge->name == NULL)
 	{
-		free(doggo->name);
-		free(doggo);
+		free(doge->name);
+		free(doge);
 		return (NULL);
 	}
-
-	doggo->name = _strcopy(doggo->name, name);
-	doggo->age = age;
-	doggo->owner = _strcopy(doggo->owner, owner);
-
-	return (doggo);
+	for (k = 0; k <= i; k++)
+		doge->name[k] = name[k];
+	doge->age = age;
+	doge->owner = malloc(j * sizeof(doge->owner));
+	if (doge->owner == NULL)
+	{
+		free(doge->owner);
+		free(doge->name);
+		free(doge);
+		return (NULL);
+	}
+	for (k = 0; k <= j; k++)
+		doge->owner[k] = owner[k];
+	return (doge);
 }
